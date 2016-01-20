@@ -1,0 +1,634 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\InstantMessaging.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\InstantMessaging.ico"
+IDI_OFFLINE             ICON    DISCARDABLE     "res\\InstantMessaging_offline.ico"
+IDI_MIKE                ICON    DISCARDABLE     "res\\mike.ico"
+IDI_TRUMP               ICON    DISCARDABLE     "res\\trump.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 InstantMessaging"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "InstantMessaging 1.0 版",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2011",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_INSTANTMESSAGING_DIALOG DIALOGEX 0, 0, 158, 274
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PG"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List5",IDC_LIST_FRIENDS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,64,141,166
+    COMBOBOX        IDC_COMBO_STATE,75,127,33,56,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FRIEND,72,7,83,175,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_NICKNAME,14,7,45,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         206,IDC_STATIC_FACE,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    NOT WS_VISIBLE | WS_BORDER,47,102,32,32
+    PUSHBUTTON      "添加",IDC_BTN_ADDFRIEND,95,24,34,14,NOT WS_TABSTOP
+    PUSHBUTTON      "群聊",IDC_BTN_CHATROOM,41,238,34,29,NOT WS_TABSTOP
+    PUSHBUTTON      "传送文件",IDC_BTN_SENDFILES,101,238,34,29,NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "共享屏幕",IDC_BTN_SHARESCREEN,37,155,34,29,NOT 
+                    WS_VISIBLE | NOT WS_TABSTOP
+    PUSHBUTTON      "白板",IDC_BTN_WHITEBOARD,96,139,34,29,NOT WS_VISIBLE | 
+                    NOT WS_TABSTOP
+    COMBOBOX        IDC_COMBO_IP,23,87,77,84,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON      "网段",IDB_ADD_SECTION,87,73,32,15,NOT WS_VISIBLE | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "个人设置",IDC_BUTTON1,17,25,43,12
+    EDITTEXT        IDC_EDIT1,17,43,47,15,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT2,80,43,65,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DIALOG_BG DIALOG DISCARDABLE  0, 0, 187, 94
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,130,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,24,50,14
+END
+
+IDD_SETTING DIALOG DISCARDABLE  0, 0, 133, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置昵称"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_NICKNAME,33,17,93,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_COMBOBOXEX_FACE,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP,33,
+                    29,37,331
+    CONTROL         "HotKey1",IDC_HOTKEY,"msctls_hotkey32",NOT WS_VISIBLE | 
+                    WS_BORDER | WS_TABSTOP,33,76,93,14
+    PUSHBUTTON      "保存",IDB_SAVE,13,76,42,14
+    PUSHBUTTON      "取消",IDB_CANCEL,71,76,42,14
+    LTEXT           "昵称",IDC_STATIC,7,19,17,8
+    LTEXT           "快捷键",IDC_STATIC,7,55,25,8,NOT WS_VISIBLE
+    LTEXT           "头像",IDC_STATIC,7,31,17,8,NOT WS_VISIBLE
+    CONTROL         "允许别人直接将我加为联系人",IDC_CHECK_AUTOADDFRIENDS,
+                    "Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,
+                    74,120,10
+END
+
+IDD_CHATROOM_SERVER DIALOG DISCARDABLE  0, 0, 392, 272
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "聊天室"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDE_SEND,7,187,243,60,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "关　闭",IDB_COLSE,143,251,50,14
+    PUSHBUTTON      "发　送",IDB_SEND,200,251,50,14
+    EDITTEXT        IDE_RECEIVED,7,7,243,174,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "List2",IDC_LIST_INCHAT,"SysListView32",LVS_REPORT | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,258,7,127,
+                    119
+    PUSHBUTTON      "添加",IDB_ADDFRIENDS,309,128,28,16
+    PUSHBUTTON      "删除",IDB_DELFRIENDS,182,201,28,16,NOT WS_VISIBLE
+    CONTROL         "List2",IDC_LIST_OUTOFCHAT,"SysListView32",LVS_REPORT | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,258,146,127,
+                    119
+END
+
+IDD_CHATROOM_CLIENT DIALOG DISCARDABLE  0, 0, 392, 272
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "聊天室"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDE_SEND,7,187,243,60,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "关　闭",IDB_CLOSE,138,251,50,14
+    PUSHBUTTON      "发　送",IDB_SEND,200,251,50,14
+    EDITTEXT        IDE_RECEIVED,7,7,243,174,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "List2",IDC_LIST_INCHAT,"SysListView32",LVS_REPORT | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,258,7,127,
+                    258
+END
+
+IDD_CHAT DIALOG DISCARDABLE  0, 0, 301, 286
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "聊天"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_RICHTEXT_SEND,
+                    "{3B7C8860-D78F-101B-B9B5-04021C009402}",WS_TABSTOP,7,
+                    189,287,69
+    PUSHBUTTON      "发　送",IDB_SEND,244,265,50,14
+    PUSHBUTTON      "聊天记录",IDB_LOADFILE,37,213,53,14,NOT WS_VISIBLE
+    CONTROL         "关闭时保存聊天记录",IDC_SAVEFILE,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,83,228,88,
+                    10
+    PUSHBUTTON      "关　闭",IDB_CLOSE,183,265,50,14
+    CONTROL         "",IDC_RICHTEXT_RECEIVED,
+                    "{3B7C8860-D78F-101B-B9B5-04021C009402}",WS_TABSTOP,7,33,
+                    287,150
+    CONTROL         206,IDS_FACE,"Static",SS_BITMAP | NOT WS_VISIBLE,43,53,
+                    21,21
+    CONTROL         "昵称",IDS_NICKNAME,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,57,7,216,8
+    CONTROL         "IP",IDS_IP,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,57,20,
+                    74,8
+    LTEXT           "用户名称",IDC_STATIC,14,7,39,11
+    LTEXT           "IP地址",IDC_STATIC,16,19,28,8
+END
+
+IDD_SHARESCREEN_CLIENT DIALOG DISCARDABLE  0, 0, 367, 305
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "共享屏幕"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDS_SCREEN,"Static",SS_BITMAP,0,0,356,294
+END
+
+IDD_SENDFILES_SERVER DIALOG DISCARDABLE  0, 0, 460, 168
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "传输文件"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST_SEND,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,446,132
+    PUSHBUTTON      "删　除",IDB_DELETE,272,147,57,14
+    PUSHBUTTON      "添　加",IDB_ADD,129,147,57,14
+END
+
+IDD_SENDFILES_CLIENT DIALOG DISCARDABLE  0, 0, 460, 168
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "接收文件"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST_RECEIVE,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,446,132
+    PUSHBUTTON      "删　除",IDB_DELETE,202,147,57,14
+END
+
+IDD_SENDFILES_USER DIALOG DISCARDABLE  0, 0, 178, 223
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择接收对象"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,30,202,50,14
+    DEFPUSHBUTTON   "取消",IDCANCEL,98,202,50,14
+    CONTROL         "List2",IDC_LIST_USER,"SysListView32",LVS_REPORT | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,7,164,188
+END
+
+IDD_SHARESCREEN_SERVER DIALOG DISCARDABLE  0, 0, 392, 272
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "共享屏幕"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List2",IDC_LIST_INSHARESCREEN,"SysListView32",
+                    LVS_REPORT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,
+                    258,7,127,119
+    CONTROL         "List2",IDC_LIST_OUTOFSHARESCREEN,"SysListView32",
+                    LVS_REPORT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,
+                    258,146,127,119
+    PUSHBUTTON      "∧",IDB_ADDFRIENDS,275,129,27,16
+    PUSHBUTTON      "∨",IDB_DELFRIENDS,334,128,31,16
+    EDITTEXT        IDE_INFORMATION,7,7,243,258,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | 
+                    WS_VSCROLL
+END
+
+IDD_WHITEBOARD_SERVER DIALOG DISCARDABLE  0, 0, 470, 315
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "白板"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List2",IDC_LIST_INWHITEBOARD,"SysListView32",LVS_REPORT | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,335,7,127,
+                    140
+    CONTROL         "List2",IDC_LIST_OUTOFWHITEBOARD,"SysListView32",
+                    LVS_REPORT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,
+                    335,167,127,141
+    PUSHBUTTON      "添加",IDB_ADDFRIENDS,372,149,11,16
+    PUSHBUTTON      "删除",IDB_DELFRIENDS,418,149,11,16
+    CONTROL         "",IDS_CANVAS,"Static",SS_BLACKFRAME | SS_NOTIFY,39,7,
+                    289,301
+    PUSHBUTTON      "橡皮察",IDB_ERASER,12,17,13,16
+    GROUPBOX        "工具",IDC_STATIC,7,7,26,258
+    PUSHBUTTON      "画笔",IDB_PENCIL,12,36,13,16
+    PUSHBUTTON      "直线",IDB_LINE,12,55,13,16
+    PUSHBUTTON      "空心矩形",IDB_RECTANGLE_EMPTY,12,74,13,16
+    PUSHBUTTON      "实心矩形",IDB_RECTANGLE,12,93,13,16
+    PUSHBUTTON      "空心椭圆",IDB_ELLIPSE_EMPTY,11,112,13,16
+    PUSHBUTTON      "实心椭圆",IDB_ELLIPSE,11,131,13,16
+    CONTROL         "",IDS_COLOR,"Static",SS_BLACKFRAME | SS_NOTIFY | 
+                    SS_CENTERIMAGE,12,156,16,15
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,151,26,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,175,26,1
+    PUSHBUTTON      "线宽二",IDB_WIDTH_2,9,201,13,16
+    PUSHBUTTON      "线宽一",IDB_WIDTH_1,9,181,13,16
+    PUSHBUTTON      "线宽三",IDB_WIDTH_3,9,221,13,16
+    PUSHBUTTON      "线宽四",IDB_WIDTH_4,9,241,13,16
+END
+
+IDD_WHITEBOARD_CLIENT DIALOG DISCARDABLE  0, 0, 409, 335
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "白板"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDS_CANVAS,"Static",SS_BLACKFRAME | SS_NOTIFY,39,7,
+                    363,321
+    PUSHBUTTON      "橡皮察",IDB_ERASER,12,17,13,16
+    GROUPBOX        "工具",IDC_STATIC,7,7,26,258
+    PUSHBUTTON      "画笔",IDB_PENCIL,12,36,13,16
+    PUSHBUTTON      "直线",IDB_LINE,12,55,13,16
+    PUSHBUTTON      "空心矩形",IDB_RECTANGLE_EMPTY,12,74,13,16
+    PUSHBUTTON      "实心矩形",IDB_RECTANGLE,12,93,13,16
+    PUSHBUTTON      "空心椭圆",IDB_ELLIPSE_EMPTY,11,112,13,16
+    PUSHBUTTON      "实心椭圆",IDB_ELLIPSE,11,131,13,16
+    CONTROL         "",IDS_COLOR,"Static",SS_BLACKFRAME | SS_NOTIFY | 
+                    SS_CENTERIMAGE,12,156,16,15
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,151,26,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,175,26,1
+    PUSHBUTTON      "线宽二",IDB_WIDTH_2,9,201,13,16
+    PUSHBUTTON      "线宽一",IDB_WIDTH_1,9,181,13,16
+    PUSHBUTTON      "线宽三",IDB_WIDTH_3,9,221,13,16
+    PUSHBUTTON      "线宽四",IDB_WIDTH_4,9,241,13,16
+END
+
+IDD_VIDEOCHAT DIALOG DISCARDABLE  0, 0, 454, 210
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "视频"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDS_FRIEND,"Static",SS_BLACKRECT,7,7,216,162
+    CONTROL         "",IDS_SELF,"Static",SS_BLACKRECT,231,7,216,162
+    ICON            IDI_MIKE,IDS_MIKE,326,178,20,20
+    ICON            IDI_TRUMP,IDS_TRUMP,99,178,20,20
+    CONTROL         "",IDC_TRUMP,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    WS_TABSTOP,92,184,8,8
+    CONTROL         "",IDC_MIKE,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    WS_TABSTOP,315,184,10,8
+    PUSHBUTTON      "<<<",IDB_SELF,173,182,50,14
+    PUSHBUTTON      "关　闭",IDB_SETTING,397,182,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "InstantMessaging Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "InstantMessaging\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2011\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "InstantMessaging.EXE\0"
+            VALUE "ProductName", "InstantMessaging 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_INSTANTMESSAGING_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_DIALOG_BG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 126
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_CHATROOM_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 385
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_CHATROOM_CLIENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 385
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_CHAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+
+    IDD_SENDFILES_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 453
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_SENDFILES_CLIENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 453
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_SENDFILES_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 171
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_SHARESCREEN_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 385
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_WHITEBOARD_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 462
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_WHITEBOARD_CLIENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 402
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 328
+    END
+
+    IDD_VIDEOCHAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 447
+        VERTGUIDE, 223
+        VERTGUIDE, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_INSTANTMESSAGING_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_STATE, 0x403, 5, 0
+0xdad4, 0xdfcf, "\000" 
+    IDC_COMBO_STATE, 0x403, 5, 0
+0xebc0, 0xdfcf, "\000" 
+    0
+END
+
+IDD_CHAT DLGINIT
+BEGIN
+    IDC_RICHTEXT_SEND, 0x37a, 161, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x0023, 0x0000, 
+0x0001, 0x0000, 0x001b, 0x0000, 0x0001, 0x8001, 0x0000, 0x000a, 0x0000, 
+0x001a, 0x0000, 0x0002, 0x8001, 0x0001, 0x0000, 0x2100, 0x3443, 0x0812, 
+0x0000, 0x8c00, 0x002c, 0xc000, 0x000a, 0x2100, 0x3443, 0x0112, 0x0600, 
+0x3000, 0x0000, 0x0000, 0xff00, 0x00ff, 0xff00, 0xffff, 0xffff, 0x00ff, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0500, 0x0000, 0x0080, 0x0000, 
+0x0000, 0x0100, 0x0200, 0x0100, 0x0100, 0x0000, 0x0000, 0x0000, "\000" 
+    IDC_RICHTEXT_RECEIVED, 0x37a, 161, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x0023, 0x0000, 
+0x0001, 0x0000, 0x001b, 0x0000, 0x0001, 0x8001, 0x0000, 0x000a, 0x0000, 
+0x001a, 0x0000, 0x0002, 0x8001, 0x0001, 0x0000, 0x2100, 0x3443, 0x0812, 
+0x0000, 0x8c00, 0x002c, 0x4100, 0x0017, 0x2100, 0x3443, 0x0112, 0x0600, 
+0x3000, 0x0000, 0x0000, 0xff00, 0xffff, 0xffff, 0xffff, 0xffff, 0x00ff, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0500, 0x0000, 0x0080, 0x0000, 
+0x0000, 0x0100, 0x0200, 0x0100, 0x0100, 0x0000, 0x0000, 0x0000, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "主界面弹出菜单"
+    BEGIN
+        MENUITEM "个人设置",                    IDM_SETTING
+        MENUITEM "聊天室",                      IDM_CHATROOM
+        MENUITEM "传送文件",                    IDM_SENDFILES
+        MENUITEM "退出",                        IDM_EXIT
+    END
+END
+
+IDR_MENU2 MENU DISCARDABLE 
+BEGIN
+    MENUITEM "好友列表弹出菜单",            65535
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_ERASER_1            CURSOR  DISCARDABLE     "res\\eraser_1.cur"
+IDC_ERASER_2            CURSOR  DISCARDABLE     "res\\eraser_2.cur"
+IDC_ERASER_3            CURSOR  DISCARDABLE     "res\\eraser_3.cur"
+IDC_ERASER_4            CURSOR  DISCARDABLE     "res\\eraser_4.cur"
+IDC_PENCIL              CURSOR  DISCARDABLE     "res\\pencil.cur"
+IDC_CURSOR              CURSOR  DISCARDABLE     "res\\cursor.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 InstantMessaging(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\InstantMessaging.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

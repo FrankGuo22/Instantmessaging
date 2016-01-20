@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: InstantMessaging - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA362.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/InstantMessaging.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Frank Guo\大学课程学习\第三次综合创作训练\综合创作训练3\综合创作训练3\综合创作训练3\5\InstantMessaging\InstantMessaging.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA362.tmp" 
+<h3>Output Window</h3>
+Compiling...
+InstantMessaging.cpp
+d:\frank guo\大瘰款踌瘰锇\碟椠搭猴创作竦岱\猴创作竦岱3\猴创作竦岱3\猴创作竦岱3\5\instantmessaging\instantmessaging.cpp(0) : fatal error C1033: cannot open program database 'd:\frank guo\大瘰款踌瘰锇\碟椠搭猴创作竦岱\猴创作竦岱3\猴创作竦岱3\猴创作竦岱3\5\instantmessaging\debug\vc60.pdb'
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+InstantMessaging.obj - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
